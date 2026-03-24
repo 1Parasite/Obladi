@@ -274,7 +274,7 @@
     <!-- Tabs -->
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:56px;" id="menu-tabs">
       <button class="tab-btn active-tab" data-tab="breakfast" onclick="switchTab('breakfast',this)" style="padding:12px 32px;background:#553722;color:white;border-radius:9999px;font-weight:500;font-size:14px;border:none;cursor:pointer;transition:all 0.2s;">Breakfast</button>
-      <button class="tab-btn" data-tab="sweet-savory" onclick="switchTab('sweet-savory',this)" style="padding:12px 32px;background:white;color:#50453e;border-radius:9999px;font-weight:500;font-size:14px;border:none;cursor:pointer;transition:all 0.2s;">Sweet &amp; Savory</button>
+      <button class="tab-btn" data-tab="sweet-savory" onclick="switchTab('sweet-savory',this)" style="padding:12px 32px;background:white;color:#50453e;border-radius:9999px;font-weight:500;font-size:14px;border:none;cursor:pointer;transition:all 0.2s;">Sucré / Salé</button>
       <button class="tab-btn" data-tab="hot-bev" onclick="switchTab('hot-bev',this)" style="padding:12px 32px;background:white;color:#50453e;border-radius:9999px;font-weight:500;font-size:14px;border:none;cursor:pointer;transition:all 0.2s;">Hot Beverages</button>
       <button class="tab-btn" data-tab="cold-bev" onclick="switchTab('cold-bev',this)" style="padding:12px 32px;background:white;color:#50453e;border-radius:9999px;font-weight:500;font-size:14px;border:none;cursor:pointer;transition:all 0.2s;">Cold Beverages</button>
       <button class="tab-btn" data-tab="lemonades" onclick="switchTab('lemonades',this)" style="padding:12px 32px;background:white;color:#50453e;border-radius:9999px;font-weight:500;font-size:14px;border:none;cursor:pointer;transition:all 0.2s;">Lemonades</button>
@@ -282,109 +282,176 @@
 
     <!-- BREAKFAST TAB -->
     <div id="tab-breakfast" class="tab-content active" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;">
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Croissant Salé" data-price="9.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCIicOp3To4eNHRPNHMUWWoiJixbU8amwvLHkgbou3_pN7NjKuN6-CU8wcVIm89-1JlBo-qJa_fySWNOw-T4jpGE1FmuQXluwXuZmN7GfXkKIes2fbKHm0W4BhTN8yxDwwVjBmfIiXLE7fG8Lpgj-7leWUf1wSajPfgpTqaAhCDU-ip21QSIbhUpvMzVI_JdRl_8RFqXyU7yoZPdVs9cF0Q1KBuTHFJqeC0SVcyl0XTXvo-NUJ1Fec8EDT0nN9UXoPrE3WqnMVphECM">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIicOp3To4eNHRPNHMUWWoiJixbU8amwvLHkgbou3_pN7NjKuN6-CU8wcVIm89-1JlBo-qJa_fySWNOw-T4jpGE1FmuQXluwXuZmN7GfXkKIes2fbKHm0W4BhTN8yxDwwVjBmfIiXLE7fG8Lpgj-7leWUf1wSajPfgpTqaAhCDU-ip21QSIbhUpvMzVI_JdRl_8RFqXyU7yoZPdVs9cF0Q1KBuTHFJqeC0SVcyl0XTXvo-NUJ1Fec8EDT0nN9UXoPrE3WqnMVphECM" alt="Croissant Salé">
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Granola Breakfast" data-price="10.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN" alt="Granola Breakfast">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Croissant Salé</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">9.500 TND</span>
+          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Granola Breakfast</h3>
+          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">10.000 TND</span>
         </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Buttery croissant with smoked turkey, cheese, and fresh garden greens.</p>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Café basique au choix, bol granola, jus frais.</p>
         <div class="card-btn-area"></div>
       </div>
 
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Berry Granola" data-price="12.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN" alt="Berry Granola">
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Breakfast Classique" data-price="8.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAYlmrDW8COv6U3ZFawo38evpL49oO3J-FIwH_EkBFVji3K-y3-KYqFAiJXqC2Jt3S-Juc_78tXDokJkoZ1Tgsn4oSKPACaJkDS5EEqNvav1UMIti2QpnCSg1cTw6DmtIRksc19ivsyfDo8VK3Tk586kvfvoS5HNEhJNHqx1d6r17tWvoxsmuK90muqyek7j3nHWhDqFIc0mJ5Rj6rb_q7areni8GPlAGYQM-KMEOmdkBYIOJtSqRgQvetAuKSJk0ZEOX0Rzq76RqPZ">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYlmrDW8COv6U3ZFawo38evpL49oO3J-FIwH_EkBFVji3K-y3-KYqFAiJXqC2Jt3S-Juc_78tXDokJkoZ1Tgsn4oSKPACaJkDS5EEqNvav1UMIti2QpnCSg1cTw6DmtIRksc19ivsyfDo8VK3Tk586kvfvoS5HNEhJNHqx1d6r17tWvoxsmuK90muqyek7j3nHWhDqFIc0mJ5Rj6rb_q7areni8GPlAGYQM-KMEOmdkBYIOJtSqRgQvetAuKSJk0ZEOX0Rzq76RqPZ" alt="Breakfast Classique">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Berry Granola</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">12.000 TND</span>
+          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Breakfast Classique</h3>
+          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">8.500 TND</span>
         </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Organic honey granola, Greek yogurt, and seasonal forest fruits.</p>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Café basique au choix, viennoiserie, jus frais.</p>
         <div class="card-btn-area"></div>
       </div>
 
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Scrambled Silk" data-price="14.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDr-eozTSX34oU6Gdy9qfSU1KMvl0HRY_DsxOJQEPg9oUJlTmcIjI0UFjI4PDQ4JFt1jsjq-8LZhB-Z0jZjrLDgY07i1AOubO1S1uCvculNnKIooc3OuSsEtUVxmW7Kw-loGhoHajqNgfjD-7vEyTa0W_PKVLgmPH_L6BEd-jyjrdVJ2YCHQ6PRIyLDdIOJphlBov1BxRaIMY4wkix0qzCtlo4we-VyE7AH30gKvotFqbLbHBTsKUo28ZCZ112M396zvG0uHcdcWtq8">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr-eozTSX34oU6Gdy9qfSU1KMvl0HRY_DsxOJQEPg9oUJlTmcIjI0UFjI4PDQ4JFt1jsjq-8LZhB-Z0jZjrLDgY07i1AOubO1S1uCvculNnKIooc3OuSsEtUVxmW7Kw-loGhoHajqNgfjD-7vEyTa0W_PKVLgmPH_L6BEd-jyjrdVJ2YCHQ6PRIyLDdIOJphlBov1BxRaIMY4wkix0qzCtlo4we-VyE7AH30gKvotFqbLbHBTsKUo28ZCZ112M396zvG0uHcdcWtq8" alt="Scrambled Silk">
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;position:relative;" data-name="Scrambled Eggs Breakfast" data-price="15.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDr-eozTSX34oU6Gdy9qfSU1KMvl0HRY_DsxOJQEPg9oUJlTmcIjI0UFjI4PDQ4JFt1jsjq-8LZhB-Z0jZjrLDgY07i1AOubO1S1uCvculNnKIooc3OuSsEtUVxmW7Kw-loGhoHajqNgfjD-7vEyTa0W_PKVLgmPH_L6BEd-jyjrdVJ2YCHQ6PRIyLDdIOJphlBov1BxRaIMY4wkix0qzCtlo4we-VyE7AH30gKvotFqbLbHBTsKUo28ZCZ112M396zvG0uHcdcWtq8">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr-eozTSX34oU6Gdy9qfSU1KMvl0HRY_DsxOJQEPg9oUJlTmcIjI0UFjI4PDQ4JFt1jsjq-8LZhB-Z0jZjrLDgY07i1AOubO1S1uCvculNnKIooc3OuSsEtUVxmW7Kw-loGhoHajqNgfjD-7vEyTa0W_PKVLgmPH_L6BEd-jyjrdVJ2YCHQ6PRIyLDdIOJphlBov1BxRaIMY4wkix0qzCtlo4we-VyE7AH30gKvotFqbLbHBTsKUo28ZCZ112M396zvG0uHcdcWtq8" alt="Scrambled Eggs Breakfast">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Scrambled Silk</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">14.500 TND</span>
+          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Scrambled Eggs Breakfast</h3>
+          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">15.000 TND</span>
         </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Soft scrambled eggs on artisan sourdough with local herbs.</p>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Café basique au choix, viennoiserie, sandwich œufs brouillés jambon, jus frais.</p>
         <div class="card-btn-area"></div>
       </div>
 
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Avocado Toast" data-price="13.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAs_Zi9O7gEU8MII_Jf8HrqYuRxsqFJHzViEyGm9J25_u9KatLCOcJ_ITkr40OV8rs7cY9ba_HvRmek2s1kj13S5gDpkBLzs9HYgWlLfxls2FoH90r6LDTWrXXShUvlfJn6L3gMbLqfRs2-2n-6yWU-bv4_roA4eycQZouPJtssLjRZr-dmvvx_g1GmttIzqvO4OuA-0ur1aOnMpyqfuzMZoZ0Qo5zmJxoAOVgv_H08SvNEcZrXDffDLiYekjzbFtm25CQK5ay6nBdF">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs_Zi9O7gEU8MII_Jf8HrqYuRxsqFJHzViEyGm9J25_u9KatLCOcJ_ITkr40OV8rs7cY9ba_HvRmek2s1kj13S5gDpkBLzs9HYgWlLfxls2FoH90r6LDTWrXXShUvlfJn6L3gMbLqfRs2-2n-6yWU-bv4_roA4eycQZouPJtssLjRZr-dmvvx_g1GmttIzqvO4OuA-0ur1aOnMpyqfuzMZoZ0Qo5zmJxoAOVgv_H08SvNEcZrXDffDLiYekjzbFtm25CQK5ay6nBdF" alt="Avocado Toast">
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;position:relative;" data-name="Formule Gourmande" data-price="17.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCNwPq1cBQXV2BCHU3mKbuq62JJtFA7vheVD4xLWtWV69E5A9kSKX8hvY8sobdf1rfT90J8_LyOQHHPBXYdrUiF43GrbIpYtTsbF_yp958w_tItJVeejZP4dLxSmkuF8lsTPbRCIN8WIHSpnHNKMaxRO9vFM9-JTi0u7YUNalYKOBCK6jM82X3Alx8LB5LoIZ_kY0VyO-UhWqTYhCop6zlVHtmTueaVSwtInPjxqa8zA9ENGIAuwhbSSTKTEpxDWivAYRbvHwJpBLW-">
+        <div style="position:absolute;top:24px;right:24px;background:#553722;color:white;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:4px 10px;border-radius:9999px;">Popular</div>
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNwPq1cBQXV2BCHU3mKbuq62JJtFA7vheVD4xLWtWV69E5A9kSKX8hvY8sobdf1rfT90J8_LyOQHHPBXYdrUiF43GrbIpYtTsbF_yp958w_tItJVeejZP4dLxSmkuF8lsTPbRCIN8WIHSpnHNKMaxRO9vFM9-JTi0u7YUNalYKOBCK6jM82X3Alx8LB5LoIZ_kY0VyO-UhWqTYhCop6zlVHtmTueaVSwtInPjxqa8zA9ENGIAuwhbSSTKTEpxDWivAYRbvHwJpBLW-" alt="Formule Gourmande">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Avocado Toast</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">13.500 TND</span>
+          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Formule Gourmande</h3>
+          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">17.000 TND</span>
         </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Smashed avocado on multigrain, chili flakes, and poached egg.</p>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Café basique au choix, toasted cake, œufs brouillés, bol granola, jus frais, eau 0,5 l.</p>
+        <div class="card-btn-area"></div>
+      </div>
+
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;position:relative;" data-name="Formule Obladi" data-price="20.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAs_Zi9O7gEU8MII_Jf8HrqYuRxsqFJHzViEyGm9J25_u9KatLCOcJ_ITkr40OV8rs7cY9ba_HvRmek2s1kj13S5gDpkBLzs9HYgWlLfxls2FoH90r6LDTWrXXShUvlfJn6L3gMbLqfRs2-2n-6yWU-bv4_roA4eycQZouPJtssLjRZr-dmvvx_g1GmttIzqvO4OuA-0ur1aOnMpyqfuzMZoZ0Qo5zmJxoAOVgv_H08SvNEcZrXDffDLiYekjzbFtm25CQK5ay6nBdF">
+        <div style="position:absolute;top:24px;right:24px;background:#6f4e37;color:white;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:4px 10px;border-radius:9999px;">Best Value</div>
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs_Zi9O7gEU8MII_Jf8HrqYuRxsqFJHzViEyGm9J25_u9KatLCOcJ_ITkr40OV8rs7cY9ba_HvRmek2s1kj13S5gDpkBLzs9HYgWlLfxls2FoH90r6LDTWrXXShUvlfJn6L3gMbLqfRs2-2n-6yWU-bv4_roA4eycQZouPJtssLjRZr-dmvvx_g1GmttIzqvO4OuA-0ur1aOnMpyqfuzMZoZ0Qo5zmJxoAOVgv_H08SvNEcZrXDffDLiYekjzbFtm25CQK5ay6nBdF" alt="Formule Obladi">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Formule Obladi</h3>
+          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">20.000 TND</span>
+        </div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Café basique au choix, pain perdu, tartine œufs brouillés avec salade, bol granola, jus frais, eau 0,5 l.</p>
         <div class="card-btn-area"></div>
       </div>
     </div>
-
-    <!-- SWEET & SAVORY TAB -->
+    <!-- SUCRÉ/SALÉ TAB -->
     <div id="tab-sweet-savory" class="tab-content" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;">
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Basque Cheesecake" data-price="9.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDD3l77Qm13aLMVzR_1B6XQWIWECPHXwKWfDa-CuuWgfhd5weeDhz27xKZuVnWU6t8lPxdBqdJ29d7gh623SjQfdDJlx-sfyio5N-jXVzJRJYxOkNa78W7wC2lbVQ3qw8zw4LbU6mHIh4tt3zFs3TjhBpnqajFTLHCpBiPZA1zdObxM9bgR1sqISEpcQxYwENblPRj1lYJyuzdkyKtUqtnA39VxsGLaPf2rbKA6dGVksIl6JB5L1Jw2k0u7p3kYR8bRsonjyfwpDpfu">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD3l77Qm13aLMVzR_1B6XQWIWECPHXwKWfDa-CuuWgfhd5weeDhz27xKZuVnWU6t8lPxdBqdJ29d7gh623SjQfdDJlx-sfyio5N-jXVzJRJYxOkNa78W7wC2lbVQ3qw8zw4LbU6mHIh4tt3zFs3TjhBpnqajFTLHCpBiPZA1zdObxM9bgR1sqISEpcQxYwENblPRj1lYJyuzdkyKtUqtnA39VxsGLaPf2rbKA6dGVksIl6JB5L1Jw2k0u7p3kYR8bRsonjyfwpDpfu" alt="Basque Cheesecake">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Basque Cheesecake</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">9.000 TND</span>
-        </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Rich, creamy Basque cheesecake with a perfectly burnt top.</p>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="French Toast Nature" data-price="7.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDgP8VGbk_wN2Jjqsts9BqgDtw7J4DVAL8Rre2dcILpLcGcMc5yC4o4WHYw8815wS6iAlsSP3YkiEssUuN6xgKbwMwIfAo7j72rwevB_NmLOeolBv1dn70e0yl9ABdIqhRYZAjIh061q1RkVRFh3HNPzaUdxFkhfh1PXBMWk9s28bgrSwz1CiE0thyLYttDq0-VLGBwbw67mgexe5XCl8VGwHjWWUn2W1NlQwnAxn6vIcOI2pazDqpiQzkGoJSL9a4corfi4MbOEDFM">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgP8VGbk_wN2Jjqsts9BqgDtw7J4DVAL8Rre2dcILpLcGcMc5yC4o4WHYw8815wS6iAlsSP3YkiEssUuN6xgKbwMwIfAo7j72rwevB_NmLOeolBv1dn70e0yl9ABdIqhRYZAjIh061q1RkVRFh3HNPzaUdxFkhfh1PXBMWk9s28bgrSwz1CiE0thyLYttDq0-VLGBwbw67mgexe5XCl8VGwHjWWUn2W1NlQwnAxn6vIcOI2pazDqpiQzkGoJSL9a4corfi4MbOEDFM" alt="French Toast Nature">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">French Toast Nature</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Brioche perdue, miel, fruits de saison.</p>
         <div class="card-btn-area"></div>
       </div>
-
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Gourmet French Toast" data-price="11.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDgP8VGbk_wN2Jjqsts9BqgDtw7J4DVAL8Rre2dcILpLcGcMc5yC4o4WHYw8815wS6iAlsSP3YkiEssUuN6xgKbwMwIfAo7j72rwevB_NmLOeolBv1dn70e0yl9ABdIqhRYZAjIh061q1RkVRFh3HNPzaUdxFkhfh1PXBMWk9s28bgrSwz1CiE0thyLYttDq0-VLGBwbw67mgexe5XCl8VGwHjWWUn2W1NlQwnAxn6vIcOI2pazDqpiQzkGoJSL9a4corfi4MbOEDFM">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgP8VGbk_wN2Jjqsts9BqgDtw7J4DVAL8Rre2dcILpLcGcMc5yC4o4WHYw8815wS6iAlsSP3YkiEssUuN6xgKbwMwIfAo7j72rwevB_NmLOeolBv1dn70e0yl9ABdIqhRYZAjIh061q1RkVRFh3HNPzaUdxFkhfh1PXBMWk9s28bgrSwz1CiE0thyLYttDq0-VLGBwbw67mgexe5XCl8VGwHjWWUn2W1NlQwnAxn6vIcOI2pazDqpiQzkGoJSL9a4corfi4MbOEDFM" alt="French Toast">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Gourmet French Toast</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">11.500 TND</span>
-        </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Caramelised bananas, maple syrup, and fresh cream.</p>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="French Toast Gourmand" data-price="12.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDgP8VGbk_wN2Jjqsts9BqgDtw7J4DVAL8Rre2dcILpLcGcMc5yC4o4WHYw8815wS6iAlsSP3YkiEssUuN6xgKbwMwIfAo7j72rwevB_NmLOeolBv1dn70e0yl9ABdIqhRYZAjIh061q1RkVRFh3HNPzaUdxFkhfh1PXBMWk9s28bgrSwz1CiE0thyLYttDq0-VLGBwbw67mgexe5XCl8VGwHjWWUn2W1NlQwnAxn6vIcOI2pazDqpiQzkGoJSL9a4corfi4MbOEDFM">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgP8VGbk_wN2Jjqsts9BqgDtw7J4DVAL8Rre2dcILpLcGcMc5yC4o4WHYw8815wS6iAlsSP3YkiEssUuN6xgKbwMwIfAo7j72rwevB_NmLOeolBv1dn70e0yl9ABdIqhRYZAjIh061q1RkVRFh3HNPzaUdxFkhfh1PXBMWk9s28bgrSwz1CiE0thyLYttDq0-VLGBwbw67mgexe5XCl8VGwHjWWUn2W1NlQwnAxn6vIcOI2pazDqpiQzkGoJSL9a4corfi4MbOEDFM" alt="French Toast Gourmand">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">French Toast Gourmand</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">12.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Pain brioché, sauce caramel, fruits secs, fruits frais.</p>
         <div class="card-btn-area"></div>
       </div>
-
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Croque Monsieur" data-price="10.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAYlmrDW8COv6U3ZFawo38evpL49oO3J-FIwH_EkBFVji3K-y3-KYqFAiJXqC2Jt3S-Juc_78tXDokJkoZ1Tgsn4oSKPACaJkDS5EEqNvav1UMIti2QpnCSg1cTw6DmtIRksc19ivsyfDo8VK3Tk586kvfvoS5HNEhJNHqx1d6r17tWvoxsmuK90muqyek7j3nHWhDqFIc0mJ5Rj6rb_q7areni8GPlAGYQM-KMEOmdkBYIOJtSqRgQvetAuKSJk0ZEOX0Rzq76RqPZ">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYlmrDW8COv6U3ZFawo38evpL49oO3J-FIwH_EkBFVji3K-y3-KYqFAiJXqC2Jt3S-Juc_78tXDokJkoZ1Tgsn4oSKPACaJkDS5EEqNvav1UMIti2QpnCSg1cTw6DmtIRksc19ivsyfDo8VK3Tk586kvfvoS5HNEhJNHqx1d6r17tWvoxsmuK90muqyek7j3nHWhDqFIc0mJ5Rj6rb_q7areni8GPlAGYQM-KMEOmdkBYIOJtSqRgQvetAuKSJk0ZEOX0Rzq76RqPZ" alt="Croque Monsieur">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Croque Monsieur</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">10.500 TND</span>
-        </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Classic French toastie with béchamel, ham, and gruyère.</p>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Summerish" data-price="12.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAs_Zi9O7gEU8MII_Jf8HrqYuRxsqFJHzViEyGm9J25_u9KatLCOcJ_ITkr40OV8rs7cY9ba_HvRmek2s1kj13S5gDpkBLzs9HYgWlLfxls2FoH90r6LDTWrXXShUvlfJn6L3gMbLqfRs2-2n-6yWU-bv4_roA4eycQZouPJtssLjRZr-dmvvx_g1GmttIzqvO4OuA-0ur1aOnMpyqfuzMZoZ0Qo5zmJxoAOVgv_H08SvNEcZrXDffDLiYekjzbFtm25CQK5ay6nBdF">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs_Zi9O7gEU8MII_Jf8HrqYuRxsqFJHzViEyGm9J25_u9KatLCOcJ_ITkr40OV8rs7cY9ba_HvRmek2s1kj13S5gDpkBLzs9HYgWlLfxls2FoH90r6LDTWrXXShUvlfJn6L3gMbLqfRs2-2n-6yWU-bv4_roA4eycQZouPJtssLjRZr-dmvvx_g1GmttIzqvO4OuA-0ur1aOnMpyqfuzMZoZ0Qo5zmJxoAOVgv_H08SvNEcZrXDffDLiYekjzbFtm25CQK5ay6nBdF" alt="Summerish">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Summerish</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">12.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Tartine pain de campagne, fromage blanc, pêches caramélisées, blanc de poulet fumé, sauce miel épicée.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Grilled Ham" data-price="12.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCIicOp3To4eNHRPNHMUWWoiJixbU8amwvLHkgbou3_pN7NjKuN6-CU8wcVIm89-1JlBo-qJa_fySWNOw-T4jpGE1FmuQXluwXuZmN7GfXkKIes2fbKHm0W4BhTN8yxDwwVjBmfIiXLE7fG8Lpgj-7leWUf1wSajPfgpTqaAhCDU-ip21QSIbhUpvMzVI_JdRl_8RFqXyU7yoZPdVs9cF0Q1KBuTHFJqeC0SVcyl0XTXvo-NUJ1Fec8EDT0nN9UXoPrE3WqnMVphECM">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIicOp3To4eNHRPNHMUWWoiJixbU8amwvLHkgbou3_pN7NjKuN6-CU8wcVIm89-1JlBo-qJa_fySWNOw-T4jpGE1FmuQXluwXuZmN7GfXkKIes2fbKHm0W4BhTN8yxDwwVjBmfIiXLE7fG8Lpgj-7leWUf1wSajPfgpTqaAhCDU-ip21QSIbhUpvMzVI_JdRl_8RFqXyU7yoZPdVs9cF0Q1KBuTHFJqeC0SVcyl0XTXvo-NUJ1Fec8EDT0nN9UXoPrE3WqnMVphECM" alt="Grilled Ham">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Grilled Ham</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">12.000 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">2 tranches de pain de campagne, fromage blanc, épinards sautés, jambon grillé, œuf au plat.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Croissant Salé" data-price="9.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCIicOp3To4eNHRPNHMUWWoiJixbU8amwvLHkgbou3_pN7NjKuN6-CU8wcVIm89-1JlBo-qJa_fySWNOw-T4jpGE1FmuQXluwXuZmN7GfXkKIes2fbKHm0W4BhTN8yxDwwVjBmfIiXLE7fG8Lpgj-7leWUf1wSajPfgpTqaAhCDU-ip21QSIbhUpvMzVI_JdRl_8RFqXyU7yoZPdVs9cF0Q1KBuTHFJqeC0SVcyl0XTXvo-NUJ1Fec8EDT0nN9UXoPrE3WqnMVphECM">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIicOp3To4eNHRPNHMUWWoiJixbU8amwvLHkgbou3_pN7NjKuN6-CU8wcVIm89-1JlBo-qJa_fySWNOw-T4jpGE1FmuQXluwXuZmN7GfXkKIes2fbKHm0W4BhTN8yxDwwVjBmfIiXLE7fG8Lpgj-7leWUf1wSajPfgpTqaAhCDU-ip21QSIbhUpvMzVI_JdRl_8RFqXyU7yoZPdVs9cF0Q1KBuTHFJqeC0SVcyl0XTXvo-NUJ1Fec8EDT0nN9UXoPrE3WqnMVphECM" alt="Croissant Salé">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Croissant Salé</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">9.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Croissant, œuf au plat, jambon, salade, tomates.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Honey Smashed" data-price="12.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCIicOp3To4eNHRPNHMUWWoiJixbU8amwvLHkgbou3_pN7NjKuN6-CU8wcVIm89-1JlBo-qJa_fySWNOw-T4jpGE1FmuQXluwXuZmN7GfXkKIes2fbKHm0W4BhTN8yxDwwVjBmfIiXLE7fG8Lpgj-7leWUf1wSajPfgpTqaAhCDU-ip21QSIbhUpvMzVI_JdRl_8RFqXyU7yoZPdVs9cF0Q1KBuTHFJqeC0SVcyl0XTXvo-NUJ1Fec8EDT0nN9UXoPrE3WqnMVphECM">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIicOp3To4eNHRPNHMUWWoiJixbU8amwvLHkgbou3_pN7NjKuN6-CU8wcVIm89-1JlBo-qJa_fySWNOw-T4jpGE1FmuQXluwXuZmN7GfXkKIes2fbKHm0W4BhTN8yxDwwVjBmfIiXLE7fG8Lpgj-7leWUf1wSajPfgpTqaAhCDU-ip21QSIbhUpvMzVI_JdRl_8RFqXyU7yoZPdVs9cF0Q1KBuTHFJqeC0SVcyl0XTXvo-NUJ1Fec8EDT0nN9UXoPrE3WqnMVphECM" alt="Honey Smashed">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Honey Smashed</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">12.000 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Croissant nature smashed au miel, fromage blanc, blanc de poulet fumé, roquette, tomates cerises.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Egg & Cheese Sandwich" data-price="9.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDr-eozTSX34oU6Gdy9qfSU1KMvl0HRY_DsxOJQEPg9oUJlTmcIjI0UFjI4PDQ4JFt1jsjq-8LZhB-Z0jZjrLDgY07i1AOubO1S1uCvculNnKIooc3OuSsEtUVxmW7Kw-loGhoHajqNgfjD-7vEyTa0W_PKVLgmPH_L6BEd-jyjrdVJ2YCHQ6PRIyLDdIOJphlBov1BxRaIMY4wkix0qzCtlo4we-VyE7AH30gKvotFqbLbHBTsKUo28ZCZ112M396zvG0uHcdcWtq8">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr-eozTSX34oU6Gdy9qfSU1KMvl0HRY_DsxOJQEPg9oUJlTmcIjI0UFjI4PDQ4JFt1jsjq-8LZhB-Z0jZjrLDgY07i1AOubO1S1uCvculNnKIooc3OuSsEtUVxmW7Kw-loGhoHajqNgfjD-7vEyTa0W_PKVLgmPH_L6BEd-jyjrdVJ2YCHQ6PRIyLDdIOJphlBov1BxRaIMY4wkix0qzCtlo4we-VyE7AH30gKvotFqbLbHBTsKUo28ZCZ112M396zvG0uHcdcWtq8" alt="Egg Cheese Sandwich">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Egg &amp; Cheese Sandwich</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">9.000 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Double tranches de pain toasté, œuf au plat, cheddar, mozzarella.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Scrambled Toast" data-price="8.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDr-eozTSX34oU6Gdy9qfSU1KMvl0HRY_DsxOJQEPg9oUJlTmcIjI0UFjI4PDQ4JFt1jsjq-8LZhB-Z0jZjrLDgY07i1AOubO1S1uCvculNnKIooc3OuSsEtUVxmW7Kw-loGhoHajqNgfjD-7vEyTa0W_PKVLgmPH_L6BEd-jyjrdVJ2YCHQ6PRIyLDdIOJphlBov1BxRaIMY4wkix0qzCtlo4we-VyE7AH30gKvotFqbLbHBTsKUo28ZCZ112M396zvG0uHcdcWtq8">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr-eozTSX34oU6Gdy9qfSU1KMvl0HRY_DsxOJQEPg9oUJlTmcIjI0UFjI4PDQ4JFt1jsjq-8LZhB-Z0jZjrLDgY07i1AOubO1S1uCvculNnKIooc3OuSsEtUVxmW7Kw-loGhoHajqNgfjD-7vEyTa0W_PKVLgmPH_L6BEd-jyjrdVJ2YCHQ6PRIyLDdIOJphlBov1BxRaIMY4wkix0qzCtlo4we-VyE7AH30gKvotFqbLbHBTsKUo28ZCZ112M396zvG0uHcdcWtq8" alt="Scrambled Toast">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Scrambled Toast</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">8.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Tartine œufs brouillés, jambon, fines herbes, salade, tomates.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="EGG DROP" data-price="12.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDr-eozTSX34oU6Gdy9qfSU1KMvl0HRY_DsxOJQEPg9oUJlTmcIjI0UFjI4PDQ4JFt1jsjq-8LZhB-Z0jZjrLDgY07i1AOubO1S1uCvculNnKIooc3OuSsEtUVxmW7Kw-loGhoHajqNgfjD-7vEyTa0W_PKVLgmPH_L6BEd-jyjrdVJ2YCHQ6PRIyLDdIOJphlBov1BxRaIMY4wkix0qzCtlo4we-VyE7AH30gKvotFqbLbHBTsKUo28ZCZ112M396zvG0uHcdcWtq8">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr-eozTSX34oU6Gdy9qfSU1KMvl0HRY_DsxOJQEPg9oUJlTmcIjI0UFjI4PDQ4JFt1jsjq-8LZhB-Z0jZjrLDgY07i1AOubO1S1uCvculNnKIooc3OuSsEtUVxmW7Kw-loGhoHajqNgfjD-7vEyTa0W_PKVLgmPH_L6BEd-jyjrdVJ2YCHQ6PRIyLDdIOJphlBov1BxRaIMY4wkix0qzCtlo4we-VyE7AH30gKvotFqbLbHBTsKUo28ZCZ112M396zvG0uHcdcWtq8" alt="EGG DROP">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">EGG DROP</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">12.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Pain brioché toasté, œufs brouillés, cheddar, sauce spicy, garniture au choix.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Toasted Cake" data-price="6.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDD3l77Qm13aLMVzR_1B6XQWIWECPHXwKWfDa-CuuWgfhd5weeDhz27xKZuVnWU6t8lPxdBqdJ29d7gh623SjQfdDJlx-sfyio5N-jXVzJRJYxOkNa78W7wC2lbVQ3qw8zw4LbU6mHIh4tt3zFs3TjhBpnqajFTLHCpBiPZA1zdObxM9bgR1sqISEpcQxYwENblPRj1lYJyuzdkyKtUqtnA39VxsGLaPf2rbKA6dGVksIl6JB5L1Jw2k0u7p3kYR8bRsonjyfwpDpfu">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD3l77Qm13aLMVzR_1B6XQWIWECPHXwKWfDa-CuuWgfhd5weeDhz27xKZuVnWU6t8lPxdBqdJ29d7gh623SjQfdDJlx-sfyio5N-jXVzJRJYxOkNa78W7wC2lbVQ3qw8zw4LbU6mHIh4tt3zFs3TjhBpnqajFTLHCpBiPZA1zdObxM9bgR1sqISEpcQxYwENblPRj1lYJyuzdkyKtUqtnA39VxsGLaPf2rbKA6dGVksIl6JB5L1Jw2k0u7p3kYR8bRsonjyfwpDpfu" alt="Toasted Cake">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Toasted Cake</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">6.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Cake caramélisé, fruits de saison.</p>
         <div class="card-btn-area"></div>
       </div>
     </div>
 
     <!-- HOT BEVERAGES TAB -->
     <div id="tab-hot-bev" class="tab-content" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;">
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Cappuccino" data-price="6.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N" alt="Cappuccino">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Cappuccino</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">6.500 TND</span>
-        </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Double espresso with velvety steamed milk and thick foam.</p>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Spicy Caramel" data-price="7.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N" alt="Spicy Caramel">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Spicy Caramel</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Café latte caramel, cannelle.</p>
         <div class="card-btn-area"></div>
       </div>
-
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Flat White" data-price="7.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAYlmrDW8COv6U3ZFawo38evpL49oO3J-FIwH_EkBFVji3K-y3-KYqFAiJXqC2Jt3S-Juc_78tXDokJkoZ1Tgsn4oSKPACaJkDS5EEqNvav1UMIti2QpnCSg1cTw6DmtIRksc19ivsyfDo8VK3Tk586kvfvoS5HNEhJNHqx1d6r17tWvoxsmuK90muqyek7j3nHWhDqFIc0mJ5Rj6rb_q7areni8GPlAGYQM-KMEOmdkBYIOJtSqRgQvetAuKSJk0ZEOX0Rzq76RqPZ">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYlmrDW8COv6U3ZFawo38evpL49oO3J-FIwH_EkBFVji3K-y3-KYqFAiJXqC2Jt3S-Juc_78tXDokJkoZ1Tgsn4oSKPACaJkDS5EEqNvav1UMIti2QpnCSg1cTw6DmtIRksc19ivsyfDo8VK3Tk586kvfvoS5HNEhJNHqx1d6r17tWvoxsmuK90muqyek7j3nHWhDqFIc0mJ5Rj6rb_q7areni8GPlAGYQM-KMEOmdkBYIOJtSqRgQvetAuKSJk0ZEOX0Rzq76RqPZ" alt="Flat White">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Signature Flat White</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.000 TND</span>
-        </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Ristretto shots with microfoam latte art, served warm.</p>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Caramel Macchiato" data-price="6.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N" alt="Caramel Macchiato">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Caramel Macchiato</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">6.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Café latte caramel.</p>
         <div class="card-btn-area"></div>
       </div>
-
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Matcha Latte" data-price="8.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN" alt="Matcha Latte">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Matcha Latte</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">8.500 TND</span>
-        </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Ceremonial grade matcha whisked with oat milk, lightly sweet.</p>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Spicy Mocha" data-price="7.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N" alt="Spicy Mocha">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Spicy Mocha</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Café latte chocolat, cannelle.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Mocha" data-price="6.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N" alt="Mocha">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Mocha</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">6.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Café latte chocolat.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Spéculoos" data-price="7.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N" alt="Spéculoos">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Spéculoos</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Café latte caramel, spéculoos.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Roasted Hazelnut" data-price="7.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N" alt="Roasted Hazelnut">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Roasted Hazelnut</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Café latte noisettes grillées.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Nutty Green" data-price="7.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N" alt="Nutty Green">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Nutty Green</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Café latte noisettes, pistaches.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Hot Chocolat Flavored" data-price="7.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDD3l77Qm13aLMVzR_1B6XQWIWECPHXwKWfDa-CuuWgfhd5weeDhz27xKZuVnWU6t8lPxdBqdJ29d7gh623SjQfdDJlx-sfyio5N-jXVzJRJYxOkNa78W7wC2lbVQ3qw8zw4LbU6mHIh4tt3zFs3TjhBpnqajFTLHCpBiPZA1zdObxM9bgR1sqISEpcQxYwENblPRj1lYJyuzdkyKtUqtnA39VxsGLaPf2rbKA6dGVksIl6JB5L1Jw2k0u7p3kYR8bRsonjyfwpDpfu">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD3l77Qm13aLMVzR_1B6XQWIWECPHXwKWfDa-CuuWgfhd5weeDhz27xKZuVnWU6t8lPxdBqdJ29d7gh623SjQfdDJlx-sfyio5N-jXVzJRJYxOkNa78W7wC2lbVQ3qw8zw4LbU6mHIh4tt3zFs3TjhBpnqajFTLHCpBiPZA1zdObxM9bgR1sqISEpcQxYwENblPRj1lYJyuzdkyKtUqtnA39VxsGLaPf2rbKA6dGVksIl6JB5L1Jw2k0u7p3kYR8bRsonjyfwpDpfu" alt="Hot Chocolat Flavored">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Hot Chocolat Flavored</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Hot chocolat aromatisé.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Hot Chocolat Classic" data-price="6.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDD3l77Qm13aLMVzR_1B6XQWIWECPHXwKWfDa-CuuWgfhd5weeDhz27xKZuVnWU6t8lPxdBqdJ29d7gh623SjQfdDJlx-sfyio5N-jXVzJRJYxOkNa78W7wC2lbVQ3qw8zw4LbU6mHIh4tt3zFs3TjhBpnqajFTLHCpBiPZA1zdObxM9bgR1sqISEpcQxYwENblPRj1lYJyuzdkyKtUqtnA39VxsGLaPf2rbKA6dGVksIl6JB5L1Jw2k0u7p3kYR8bRsonjyfwpDpfu">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD3l77Qm13aLMVzR_1B6XQWIWECPHXwKWfDa-CuuWgfhd5weeDhz27xKZuVnWU6t8lPxdBqdJ29d7gh623SjQfdDJlx-sfyio5N-jXVzJRJYxOkNa78W7wC2lbVQ3qw8zw4LbU6mHIh4tt3zFs3TjhBpnqajFTLHCpBiPZA1zdObxM9bgR1sqISEpcQxYwENblPRj1lYJyuzdkyKtUqtnA39VxsGLaPf2rbKA6dGVksIl6JB5L1Jw2k0u7p3kYR8bRsonjyfwpDpfu" alt="Hot Chocolat Classic">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Hot Chocolat Classic</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">6.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Hot chocolat classique maison.</p>
         <div class="card-btn-area"></div>
       </div>
     </div>
@@ -393,54 +460,54 @@
     <div id="tab-cold-bev" class="tab-content" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;">
       <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Cappuccino Frappé" data-price="8.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N">
         <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N" alt="Cappuccino Frappé">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Cappuccino Frappé</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">8.000 TND</span>
-        </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Double shot espresso, chilled milk, and whipped velvet foam.</p>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Cappuccino Frappé</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">8.000 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Frappuccino base, espresso shot.</p>
         <div class="card-btn-area"></div>
       </div>
-
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Cold Brew" data-price="9.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAYlmrDW8COv6U3ZFawo38evpL49oO3J-FIwH_EkBFVji3K-y3-KYqFAiJXqC2Jt3S-Juc_78tXDokJkoZ1Tgsn4oSKPACaJkDS5EEqNvav1UMIti2QpnCSg1cTw6DmtIRksc19ivsyfDo8VK3Tk586kvfvoS5HNEhJNHqx1d6r17tWvoxsmuK90muqyek7j3nHWhDqFIc0mJ5Rj6rb_q7areni8GPlAGYQM-KMEOmdkBYIOJtSqRgQvetAuKSJk0ZEOX0Rzq76RqPZ">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYlmrDW8COv6U3ZFawo38evpL49oO3J-FIwH_EkBFVji3K-y3-KYqFAiJXqC2Jt3S-Juc_78tXDokJkoZ1Tgsn4oSKPACaJkDS5EEqNvav1UMIti2QpnCSg1cTw6DmtIRksc19ivsyfDo8VK3Tk586kvfvoS5HNEhJNHqx1d6r17tWvoxsmuK90muqyek7j3nHWhDqFIc0mJ5Rj6rb_q7areni8GPlAGYQM-KMEOmdkBYIOJtSqRgQvetAuKSJk0ZEOX0Rzq76RqPZ" alt="Cold Brew">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Cold Brew</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">9.000 TND</span>
-        </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">18-hour steeped coffee, smooth and naturally sweet, served over ice.</p>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Caramel Frappé" data-price="8.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N" alt="Caramel Frappé">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Caramel Frappé</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">8.000 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Frappuccino base, caramel.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Mocha Frappé" data-price="8.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N" alt="Mocha Frappé">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Mocha Frappé</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">8.000 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Frappuccino base, chocolat.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Peach Melba" data-price="7.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN" alt="Peach Melba">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Peach Melba</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Pêche, vanille.</p>
+        <div class="card-btn-area"></div>
+      </div>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Passion Drink" data-price="7.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN" alt="Passion Drink">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Passion Drink</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Fruit de la passion, banane, grenadine.</p>
         <div class="card-btn-area"></div>
       </div>
     </div>
 
     <!-- LEMONADES TAB -->
     <div id="tab-lemonades" class="tab-content" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;">
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Classic Lemonade" data-price="7.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN" alt="Lemonade">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Classic Lemonade</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.000 TND</span>
-        </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Fresh-squeezed lemons, cane sugar, and sparkling water.</p>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Homemade Mojito" data-price="7.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLY9d9X85WLpQ5zdVVe2tbvvh6WeLKoKzhUwtYaafNN18Zy6jYPcC_CDQYm_-hp64FazshpH3qVADxDJWj7hWODUMwPt3SX9JZqHhib9jH_NmcGZh4koCqWVlBPccCppRNx-vd39V2Qopw9kE9YKhJpKJCFfKwq_RGBcsc01pU2X6DwJpEvZ-so7IH6_AzJ8z1OlnB2c8MNWLd3rpGG874d1q8WcrAXZqKpo1E8M-A1b3vBKDju3Zy29yZ8-4ZSJGksrEoaFvflUIN" alt="Homemade Mojito">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Homemade Mojito</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Mojito maison.</p>
         <div class="card-btn-area"></div>
       </div>
-
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Mint & Ginger Lemonade" data-price="8.000" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg04co3_shCJXYLOQnlX6zEz3iLPx5HfHoq0uFZnc-6uK9Wju_4Aaph-P61UsgX4DbNNr3sxSjt2ENy9yY9gips9Cr4UfoITc_PRF9GbOmsxyZCBfNeaBB_KhDu7F5I668Rv-FsfdHi2sC8mu1VM9Q1QUF-E-D8kYhMs3prvv8uTXSdjI6pdnaBxEjnmR0hV-GzkgalvQx4_9RadlccmQ48mIiIDYqbULC-7v81v0IOZPm0CkSA8VQKm3bXQVWgH1bXKfRaz-C8b7N" alt="Mint Ginger Lemonade">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Mint &amp; Ginger Lemonade</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">8.000 TND</span>
-        </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Zesty lemon with fresh mint, ginger, and a hint of honey.</p>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Pink Lemonade" data-price="7.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDgP8VGbk_wN2Jjqsts9BqgDtw7J4DVAL8Rre2dcILpLcGcMc5yC4o4WHYw8815wS6iAlsSP3YkiEssUuN6xgKbwMwIfAo7j72rwevB_NmLOeolBv1dn70e0yl9ABdIqhRYZAjIh061q1RkVRFh3HNPzaUdxFkhfh1PXBMWk9s28bgrSwz1CiE0thyLYttDq0-VLGBwbw67mgexe5XCl8VGwHjWWUn2W1NlQwnAxn6vIcOI2pazDqpiQzkGoJSL9a4corfi4MbOEDFM">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgP8VGbk_wN2Jjqsts9BqgDtw7J4DVAL8Rre2dcILpLcGcMc5yC4o4WHYw8815wS6iAlsSP3YkiEssUuN6xgKbwMwIfAo7j72rwevB_NmLOeolBv1dn70e0yl9ABdIqhRYZAjIh061q1RkVRFh3HNPzaUdxFkhfh1PXBMWk9s28bgrSwz1CiE0thyLYttDq0-VLGBwbw67mgexe5XCl8VGwHjWWUn2W1NlQwnAxn6vIcOI2pazDqpiQzkGoJSL9a4corfi4MbOEDFM" alt="Pink Lemonade">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Pink Lemonade</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">7.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Pink lemonade maison.</p>
         <div class="card-btn-area"></div>
       </div>
-
-      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Strawberry Lemonade" data-price="8.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDgP8VGbk_wN2Jjqsts9BqgDtw7J4DVAL8Rre2dcILpLcGcMc5yC4o4WHYw8815wS6iAlsSP3YkiEssUuN6xgKbwMwIfAo7j72rwevB_NmLOeolBv1dn70e0yl9ABdIqhRYZAjIh061q1RkVRFh3HNPzaUdxFkhfh1PXBMWk9s28bgrSwz1CiE0thyLYttDq0-VLGBwbw67mgexe5XCl8VGwHjWWUn2W1NlQwnAxn6vIcOI2pazDqpiQzkGoJSL9a4corfi4MbOEDFM">
-        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgP8VGbk_wN2Jjqsts9BqgDtw7J4DVAL8Rre2dcILpLcGcMc5yC4o4WHYw8815wS6iAlsSP3YkiEssUuN6xgKbwMwIfAo7j72rwevB_NmLOeolBv1dn70e0yl9ABdIqhRYZAjIh061q1RkVRFh3HNPzaUdxFkhfh1PXBMWk9s28bgrSwz1CiE0thyLYttDq0-VLGBwbw67mgexe5XCl8VGwHjWWUn2W1NlQwnAxn6vIcOI2pazDqpiQzkGoJSL9a4corfi4MbOEDFM" alt="Strawberry Lemonade">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-          <h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Strawberry Lemonade</h3>
-          <span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">8.500 TND</span>
-        </div>
-        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">House-made strawberry purée blended with fresh lemon and soda.</p>
+      <div class="menu-card hover-lift" style="background:white;border-radius:2rem;overflow:hidden;padding:16px;" data-name="Basic Lemonade" data-price="6.500" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDgP8VGbk_wN2Jjqsts9BqgDtw7J4DVAL8Rre2dcILpLcGcMc5yC4o4WHYw8815wS6iAlsSP3YkiEssUuN6xgKbwMwIfAo7j72rwevB_NmLOeolBv1dn70e0yl9ABdIqhRYZAjIh061q1RkVRFh3HNPzaUdxFkhfh1PXBMWk9s28bgrSwz1CiE0thyLYttDq0-VLGBwbw67mgexe5XCl8VGwHjWWUn2W1NlQwnAxn6vIcOI2pazDqpiQzkGoJSL9a4corfi4MbOEDFM">
+        <img style="width:100%;height:180px;object-fit:cover;border-radius:16px;margin-bottom:12px;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgP8VGbk_wN2Jjqsts9BqgDtw7J4DVAL8Rre2dcILpLcGcMc5yC4o4WHYw8815wS6iAlsSP3YkiEssUuN6xgKbwMwIfAo7j72rwevB_NmLOeolBv1dn70e0yl9ABdIqhRYZAjIh061q1RkVRFh3HNPzaUdxFkhfh1PXBMWk9s28bgrSwz1CiE0thyLYttDq0-VLGBwbw67mgexe5XCl8VGwHjWWUn2W1NlQwnAxn6vIcOI2pazDqpiQzkGoJSL9a4corfi4MbOEDFM" alt="Basic Lemonade">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;"><h3 style="font-family:'Noto Serif',serif;font-size:17px;color:#553722;margin:0;">Basic Lemonade</h3><span style="font-weight:700;color:#553722;font-size:13px;white-space:nowrap;margin-left:8px;">6.500 TND</span></div>
+        <p style="color:#50453e;font-size:12px;margin:0 0 14px;line-height:1.5;">Limonade maison classique.</p>
         <div class="card-btn-area"></div>
       </div>
     </div>
@@ -526,15 +593,14 @@
   <div style="max-width:80rem;margin:0 auto;">
     <div style="display:grid;grid-template-columns:1fr 1fr;overflow:hidden;border-radius:3rem;box-shadow:0 25px 50px rgba(0,0,0,0.15);background:white;">
       <div style="height:500px;position:relative;">
-        <img style="width:100%;height:100%;object-fit:cover;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtyWzX174rbmDt1El0xVprOo5jkpSdetlFgmhUowwIl_1cAj7Oe4yzaTSfRcx5T_z6Ow78XQc08lEtNmuH17Yr16P35edMCXNKTTR7pk1Rdyq2M-0cnI4LEfuhF-6vzIK8Vi8cqGC5RdqfXY-H_KPFY8vVFUGDUdf6U_wQHFmQf0iEIcSYfZjaf2-s91xjwjlyK0a4FH2-DtXguaQ6Rl1jVdZu_ukPwbINV5I7hWKxskDle37l_Er9bWpOdT8eSEkD-J8XjIi4iwH5" alt="map">
-        <div style="position:absolute;inset:0;background:rgba(85,55,34,0.08);"></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.4!2d10.2346!3d36.8479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd34b3f9ba25b1%3A0xd8b6a7f9c3e84b2a!2sObladi%20Coffee%20%26%20Brunch!5e0!3m2!1sen!2stn!4v1700000000000" width="100%" height="100%" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div style="padding:64px;display:flex;flex-direction:column;justify-content:center;gap:32px;">
         <h2 style="font-family:'Noto Serif',serif;font-size:2.5rem;line-height:1.2;margin:0;">Visit Our Sanctuary</h2>
         <div style="display:flex;flex-direction:column;gap:24px;">
           <div style="display:flex;gap:16px;align-items:flex-start;">
             <span class="material-symbols-outlined" style="color:#553722;flex-shrink:0;">location_on</span>
-            <div><p style="font-weight:700;margin:0 0 4px;">Address</p><p style="color:#50453e;margin:0;">Rue du Lac Huron, Les Berges du Lac 1, Tunis</p></div>
+            <div><p style="font-weight:700;margin:0 0 4px;">Address</p><a href="https://maps.google.com/?q=Obladi+Coffee+Rue+du+Lac+Huron+Tunis" target="_blank" style="color:#50453e;text-decoration:none;" onmouseover="this.style.color='#553722'" onmouseout="this.style.color='#50453e'">Rue du Lac Huron, Les Berges du Lac 1, Tunis</a></div>
           </div>
           <div style="display:flex;gap:16px;align-items:flex-start;">
             <span class="material-symbols-outlined" style="color:#553722;flex-shrink:0;">call</span>
@@ -550,7 +616,7 @@
             <span class="material-symbols-outlined" style="color:#16a34a;font-size:20px;">delivery_dining</span>
             <p style="font-size:13px;font-weight:600;color:#50453e;margin:0;">Fast delivery via Glovo</p>
           </div>
-          <a href="https://glovoapp.com" target="_blank" class="glovo-btn" style="display:flex;width:100%;background:#ffc244;color:#00a082;padding:16px;border-radius:9999px;font-weight:700;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:filter 0.2s;" onmouseover="this.style.filter='brightness(1.07)'" onmouseout="this.style.filter='none'">
+          <a href="https://glovoapp.com/tn/ar/tunis/obladi-tunis/" target="_blank" class="glovo-btn" style="display:flex;width:100%;background:#ffc244;color:#00a082;padding:16px;border-radius:9999px;font-weight:700;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:filter 0.2s;" onmouseover="this.style.filter='brightness(1.07)'" onmouseout="this.style.filter='none'">
             Order with Glovo
           </a>
         </div>
@@ -568,8 +634,8 @@
     </div>
     <div style="display:flex;flex-direction:column;gap:12px;font-size:12px;">
       <p style="color:#553722;font-weight:700;text-transform:uppercase;margin:0 0 4px;">Social</p>
-      <a href="https://instagram.com" target="_blank" style="color:#50453e;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#6F4E37'" onmouseout="this.style.color='#50453e'">Instagram</a>
-      <a href="https://facebook.com" target="_blank" style="color:#50453e;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#6F4E37'" onmouseout="this.style.color='#50453e'">Facebook</a>
+      <a href="https://www.instagram.com/obladicoffee/" target="_blank" style="color:#50453e;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#6F4E37'" onmouseout="this.style.color='#50453e'">Instagram</a>
+      <a href="https://www.facebook.com/ObladiCoffee/" target="_blank" style="color:#50453e;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#6F4E37'" onmouseout="this.style.color='#50453e'">Facebook</a>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px;font-size:12px;">
       <p style="color:#553722;font-weight:700;text-transform:uppercase;margin:0 0 4px;">Quick Links</p>
